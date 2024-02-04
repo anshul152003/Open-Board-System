@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.options-cont{
+    height: 3.25rem;
+    width: 3rem;
+    background-color: #f1f2f6;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    display: flex;
+    justify-content: center; /*all 3 are to center the bar*/ 
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tools-cont{
+    background-color: #f1f2f6;
+    display: flex;
+    height: 5rem;
+    width: 60vw;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    top: 2.5rem;
+    left: 22vw;
+}
+
+.scale-tools{
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+@keyframes scale-tools{
+    0%{
+       transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.tools-cont> *{
+    display: block;
+    width: 4rem;
+}
+
+.pencil-tool-cont{
+    height: 9.5rem;
+    width: 7rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    position: absolute;
+    top: 7.75rem;
+    left: 21rem;
+    display: none;
+}
+
+.pencil-width-cont{
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont input{
+    width: 80%;
+}
+
+.pencil-color-cont{
+    height: calc(100% - 1.5rem);
+    margin: 0.5rem 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px; /* This sets both row and column gap, adjust as needed */
+}
+
+.pencil-color{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.blue {
+    background-color: blue;
+}
+.pink {
+    background-color: magenta;
+}
+.violet{
+    background-color: darkviolet;
+}
+.chocolate{
+    background-color: chocolate;
+}
+.olive{
+    background-color: olive;
+}
+
+.eraser-tool-cont{
+    height: 1.5rem;
+    width: 7rem;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    position: absolute;
+    top: 7.75rem;
+    left: 30rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.eraser-width-cont input{
+    width: 90%;
+}
+
+.sticky-cont{
+    height: 14rem;
+    width: 14rem;
+    position: absolute;
+    top: 19rem;
+    left: 10rem;
+}
+.header-cont{
+    height: 2rem;
+    background-color: #f1f2f6;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.header-cont > * {
+    border-radius: 50%;
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-right: 0.5rem;
+}
+.minimize{
+    background-color: #44bd32;
+}
+.remove{
+    background-color: #e84118;
+}
+.note-cont{
+    height: calc(100% - 2rem);
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

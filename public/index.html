@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Open-Board System</title>
+</head>
+<body>
+
+    <!--Option menu-->
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!--Tool Bar-->
+    <div class="tools-cont scale-tools">
+        <img src="images/pencil.svg" class="pencil" alt="Create">
+        <img src="images/eraser.svg" class="eraser" alt="Eraser">
+        <img src="images/download1.svg" class="download" alt="Download">
+        <img src="images/upload1.svg" class="upload" alt="Upload">
+        <img src="images/document.svg" class="sticky" alt="Sticky">
+        <img src="images/undo.svg" class="undo" alt="Undo">
+        <img src="images/redo.svg" class="redo" alt="Redo">
+    </div>
+
+    <div class="pencil-tool-cont">
+
+        <div class="pencil-width-cont">
+            <!-- range input for the width of the pencil  --->
+            <input type="range" min="2" max="10" value="3" class="pencil-width"> 
+        </div>
+
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="green pencil-color"></div>
+            <div class="yellow pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="pink pencil-color"></div>
+            <div class="violet pencil-color"></div>
+            <div class="chocolate pencil-color"></div>
+            <div class="olive pencil-color"></div>
+        </div>
+    </div>
+
+    <div class="eraser-tool-cont">
+        <div class="eraser-width-cont">
+            <input type="range" min="2" max="20" value="3" class="eraser-width">
+        </div>
+    </div> 
+ 
+ <!--    <div class="sticky-cont">
+   <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea name="Notes" cols="30" rows="10"></textarea>
+        </div> 
+    </div>
+ -->  
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");// connect frontend to socket.io server using default port 3000
+    </script>
+
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+    
+</body>
+</html>
